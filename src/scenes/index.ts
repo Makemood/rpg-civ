@@ -1,2 +1,2 @@
-import { StartScene } from "./startScene";
-export const scenes = [StartScene];
+import { Durotar } from "./startScene";
+export const scenes = [Durotar];

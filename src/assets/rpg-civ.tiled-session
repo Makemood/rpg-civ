@@ -3,7 +3,7 @@
         "height": 4300,
         "width": 2
     },
-    "activeFile": "island.json",
+    "activeFile": "durotar.json",
     "expandedProjectPaths": [
         "."
     ],
@@ -23,6 +23,17 @@
         "civmap.json#tiles": {
             "scaleInDock": 1
         },
+        "durotar.json": {
+            "scale": 0.75,
+            "selectedLayer": 1,
+            "viewCenter": {
+                "x": 588.6666666666666,
+                "y": 336
+            }
+        },
+        "durotar.json#tiles": {
+            "scaleInDock": 1
+        },
         "island.json": {
             "scale": 0.75,
             "selectedLayer": 0,
@@ -35,10 +46,11 @@
     "last.imagePath": "C:/Users/Nick/Documents/ai_learn/Phaser_TypeScript/rpg-learn/src/assets",
     "map.lastUsedFormat": "json",
     "openFiles": [
-        "island.json"
+        "durotar.json"
     ],
     "project": "rpg-civ.tiled-project",
     "recentFiles": [
+        "durotar.json",
         "island.json",
         "civmap.json"
     ],

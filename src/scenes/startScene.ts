@@ -27,7 +27,7 @@ export class Durotar extends Phaser.Scene{
     create () {
         const map = this.make.tilemap({key: 'map'});
         const tileset = map.addTilesetImage(islandJSON.tilesets[0].name, TILES.Durotar, SIZES.TILE, SIZES.TILE);;
-        //const groundLayer = map.createLayer(LAYERS.GROUND, tileset, 0,0);
+        const groundLayer = map.createLayer(LAYERS.GROUND, tileset, 0,0);
         const wallsLayer = map.createLayer(LAYERS.WALLS, tileset, 0,0);
 
         this.player = new Player(this,400,250, SPRITES.PLAYER);
@@ -40,6 +40,7 @@ export class Durotar extends Phaser.Scene{
         this.player.setCollideWorldBounds(true);
 
         this.physics.add.collider(this.player, wallsLayer);
+        groundLayer.active= true;
         wallsLayer.setCollisionByExclusion([-1]);
     }
     update(_: number, delta: number): void {

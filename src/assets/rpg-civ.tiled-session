@@ -24,15 +24,15 @@
             "scaleInDock": 1
         },
         "durotar.json": {
-            "scale": 0.75,
+            "scale": 0.5,
             "selectedLayer": 1,
             "viewCenter": {
-                "x": 588.6666666666666,
-                "y": 336
+                "x": 565,
+                "y": 756
             }
         },
         "durotar.json#tiles": {
-            "scaleInDock": 1
+            "scaleInDock": 1.5
         },
         "island.json": {
             "scale": 0.75,

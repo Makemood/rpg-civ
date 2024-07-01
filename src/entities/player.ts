@@ -1,4 +1,4 @@
-import { SPRITES } from "../utils/constants";
+
 import { Entity } from "./entity";
 
 export class Player extends Entity{
@@ -6,10 +6,10 @@ export class Player extends Entity{
     private moveSpeed: number;
     
 
-    constructor(scene: Phaser.Scene, x: number, y: number, texture: string, type?: string){
-        super(scene, x, y, texture, SPRITES.PLAYER);
+    constructor(scene: Phaser.Scene, x: number, y: number, texture: string){
+        super(scene, x, y, texture);
 
-        const anims = this.scene.anims;
+        const {anims} = this.scene;
         const animsFrameRate = 9;
         this.textureKey = texture;
         this.moveSpeed = 50;

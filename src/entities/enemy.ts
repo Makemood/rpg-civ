@@ -1,5 +1,4 @@
 import { Entity } from "./entity";
-
 export class Enemy extends Entity{
     private player: Entity;
     isFollowing = false;
@@ -70,8 +69,8 @@ export class Enemy extends Entity{
             }
         })
     }
-    update(...args: any[]): void {
-        const player = this.player;
+    update(): void {
+        const {player} = this;
         const distanceToPlayer = Phaser.Math.Distance.Between(this.x, this.y, player.x, player.y);
         const distanceToPos = Phaser.Math.Distance.Between(this.x,this.y, this.initialPosition.x, this.initialPosition.y )
         if(!this.isFollowing && distanceToPlayer < 100){

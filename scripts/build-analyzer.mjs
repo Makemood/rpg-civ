@@ -8,7 +8,7 @@ await rm(out,{recursive:true,force:true});
 await mkdir(path.join(out,'hand-analyzer'),{recursive:true});
 await copyFile(path.join(root,'index.html'),path.join(out,'index.html'));
 // Explicit allowlist: no user histories, tests, archives or local config in deploy output.
-for(const name of ['index.html','style.css','app.js','parser.js','zip.js','demo.js','advice.js','opponents.js','screen.js','screen-facts.js']){
+for(const name of ['index.html','style.css','app.js','parser.js','zip.js','demo.js','advice.js','opponents.js','screen.js','screen-facts.js','gg-table.js','card-vision.js']){
  await copyFile(path.join(root,'hand-analyzer',name),path.join(out,'hand-analyzer',name));
 }
 const vendor=path.join(root,'hand-analyzer/vendor/ocr');

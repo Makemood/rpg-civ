@@ -8,3 +8,7 @@
 #opponents{margin:22px 0}.player-tag{display:inline-block;padding:4px 7px;border-radius:5px;background:#293241;color:#a9b7cb;font-size:10px;margin:2px 0}.player-tag.reg{background:#27384c;color:#a3d2ff}.player-tag.fish{background:#423d27;color:#edda9c}.player-tag.whale{background:#403049;color:#dfb6f1}.hand-players{margin:20px 0}.hand-players td{font-size:11px}.hand-players select{max-width:140px}
 
 #screen{margin:24px 0}.screen-buttons{display:flex;flex-wrap:wrap;gap:9px}#screenStatus{font-size:12px;line-height:1.8;color:var(--accent)}#screenCanvas{max-width:100%;height:auto;max-height:460px;object-fit:contain;margin-top:15px;border:1px solid var(--line);border-radius:7px}#screenText{min-height:160px}.screen-record{padding:15px;border-top:1px solid var(--line);font-size:12px;line-height:1.7}.screen-record small{color:var(--muted)}#screenLog{max-height:480px;overflow:auto}#screen .filters label{font-size:12px;color:#b1bdce;display:flex;align-items:center;gap:9px}#screen .filters input[type=checkbox]{flex:none;min-width:0;accent-color:var(--accent)}
+
+#screen .filters label{min-width:0;max-width:100%;flex-wrap:wrap}#screen .filters select{min-width:0;max-width:100%}#screenProfile{width:100%}.screen-buttons label{max-width:100%;font-size:12px}.screen-buttons select{max-width:100%}
+
+#profilePot,#profileStack{max-width:110px;width:110px;display:block;margin-top:5px}

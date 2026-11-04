@@ -1,0 +1,7 @@
+
+# Preserve vendored OCR bytes for integrity checks across platforms.
+hand-analyzer/vendor/ocr/* -text
+hand-analyzer/vendor/ocr/*.js -diff
+hand-analyzer/vendor/ocr/*.gz binary
+# Upstream license retains its original trailing blank line.
+hand-analyzer/vendor/ocr/LICENSE-core.txt whitespace=-blank-at-eof

@@ -4,10 +4,11 @@
   "version": "0.0.0",
   "type": "module",
   "scripts": {
-    "start": "nodemon index.js",
-    "dev": "vite",
-    "build": "tsc && vite build",
-    "preview": "vite preview"
+    "start": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "dev": "python3 -m http.server 4173 --bind 127.0.0.1",
+    "build": "node scripts/build-analyzer.mjs",
+    "test": "npm test --prefix hand-analyzer",
+    "preview": "python3 -m http.server 4173 --bind 127.0.0.1 --directory dist"
   },
   "devDependencies": {
     "nodemon": "^3.1.4",

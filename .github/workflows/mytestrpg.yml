@@ -1,24 +1,43 @@
-name: Deploy to GitHub Pages
+name: Build and deploy River analyzer
 
 on:
   push:
-    branches:
-      - master  # Change this to your main branch if it's different
+    branches: [master]
+  pull_request:
+    branches: [master]
+
+permissions:
+  contents: read
 
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Build
-        run: |
-          # Your build commands here
-          # For example, if you're using Python:
-          pip install -r requirements.txt
-          python -m build
-      - name: Deploy
-        uses: JamesIves/github-pages-deploy-action@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
-          branch: gh-pages  # The branch where your GitHub Pages site is hosted
-          folder: dist  # The folder containing your built website
+          node-version: 22
+      - name: Test analyzer
+        run: npm test
+      - name: Build static site
+        run: npm run build
+      - uses: actions/upload-artifact@v4
+        with:
+          name: river-site
+          path: dist
+  deploy:
+    if: github.event_name == 'push'
+    needs: build
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          name: river-site
+          path: dist
+      - uses: JamesIves/github-pages-deploy-action@v4
+        with:
+          branch: gh-pages
+          folder: dist
